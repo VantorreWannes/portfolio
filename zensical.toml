@@ -50,7 +50,8 @@ nav = [
       "projects/dpatch.md",
       "projects/skim.md",
       "projects/pythonwrangler.md",
-      "projects/productioncode.md"
+      "projects/production-code.md",
+      "projects/gol-painter.md"
   ]}
 ]
 

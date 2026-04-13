@@ -2,7 +2,7 @@
 icon: lucide/folder-open
 ---
 
-# Projects & Open Source
+# Projects
 
 Below is a categorized directory of my active projects. Select a project to view its architecture, technical implementation, and overall impact.
 
