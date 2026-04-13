@@ -1,2 +1,2 @@
 # portfolio
-My portfolio website made with Zzensical.
+My portfolio website made with Zensical.
