@@ -44,15 +44,21 @@ copyright = "Copyright &copy; 2026 Wannes Vantorre"
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
   { "Wannes Vantorre" = "index.md" },
-  { "Projects" = [
-      "projects/index.md",
-      "projects/easyversion.md",
-      "projects/dpatch.md",
-      "projects/skim.md",
-      "projects/pythonwrangler.md",
-      "projects/production-code.md",
-      "projects/gol-painter.md"
-  ]}
+  { "Writeups" = [
+      "writeups/index.md",
+      "writeups/firetrail.md",
+      "writeups/skim.md",
+      "writeups/cos-lcs.md",
+  ]},
+  # { "Projects" = [
+  #     "projects/index.md",
+  #     "projects/easyversion.md",
+  #     "projects/dpatch.md",
+  #     "projects/skim.md",
+  #     "projects/pythonwrangler.md",
+  #     "projects/production-code.md",
+  #     "projects/gol-painter.md"
+  # ]}
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize

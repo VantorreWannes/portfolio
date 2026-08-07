@@ -11,11 +11,11 @@ icon: material/source-commit
 ---
 
 !!! abstract "Project Overview"
-    `dpatch` is a stateful delta patching library built in Zig. By analyzing the structural differences between a source and target byte sequence, it generates a highly compressed set of instructions—a "patch"—that can precisely reconstruct the target data from the original source without transmitting the entire file.
+`dpatch` is a stateful delta patching library built in Zig. By analyzing the structural differences between a source and target byte sequence, it generates a highly compressed set of instructions—a "patch"—that can precisely reconstruct the target data from the original source without transmitting the entire file.
 
 ## Core Mechanics & Impact
 
-In distributed systems, game development, and IoT environments, transmitting entire files for minor updates incurs heavy bandwidth costs and latency. 
+In distributed systems, game development, and IoT environments, transmitting entire files for minor updates incurs heavy bandwidth costs and latency.
 
 `dpatch` solves this by calculating the exact minimal difference. Instead of sending a 100MB updated binary over the network, systems can transmit a fractionally sized patch. The client then applies this patch to their local 100MB file, seamlessly upgrading it while drastically reducing payload sizes and network congestion.
 
@@ -74,4 +74,4 @@ while (try dpatch_encoder.next()) |delta| {
 ## Robustness & Validation
 
 !!! info "Memory Safety & Fuzz Testing"
-    The library is built with strict memory safety in mind, passing custom allocators down the stack to ensure zero hidden allocations. The codebase is validated using **Fuzz Testing** (`std.testing.fuzz`) to programmatically ensure absolute encode/decode parity across thousands of randomized, mutated byte streams.
+The library is built with strict memory safety in mind, passing custom allocators down the stack to ensure zero hidden allocations. The codebase is validated using **Fuzz Testing** (`std.testing.fuzz`) to programmatically ensure absolute encode/decode parity across thousands of randomized, mutated byte streams.
