@@ -1,44 +1,35 @@
 ---
 icon: lucide/user
+hide:
+  - toc
 ---
 
 # Wannes Vantorre
 
-**Systems Programmer & Algorithm designer**
+**Systems programmer & AI developer in Bruges, Belgium.**
 
-[:simple-github: GitHub](https://github.com/VantorreWannes){: .md-button .md-button--primary }
-[:material-linkedin: LinkedIn](https://www.linkedin.com/in/wannes-vantorre){: .md-button .md-button--primary }
-[:material-email: Email](mailto:Vantorrewannes@gmail.com){: .md-button .md-button--primary }
+I build efficient, reliable software with Rust, Go, Zig, Python, and C#. I enjoy designing algorithms, understanding bottlenecks, and making trade-offs backed by measurements.
 
----
+At **Yields**, I built AI retrieval tools and worked on automated testing. At **Jimber**, I developed file monitoring and malware scanning tools. I graduated from **Howest** in Programming, focused on C#/.NET.
 
-!!! abstract "Profile"
-    - I am a passionate _algorithms developer_ focused on improving **systems level challenges**.
-    - I like making a difference in this world with my algorithms.
-    - I specialise in compression and longest common subsequence algorithms.
-    - I take much pride in my work and dont compromise on quality and efficiency.
+I'm looking for opportunities in **systems programming and backend development**.
 
-## Technical Expertise
+[GitHub](https://github.com/VantorreWannes) ·
+[LinkedIn](https://www.linkedin.com/in/wannes-vantorre) ·
+[Email](mailto:vantorrewannes@gmail.com)
 
-=== "Languages & Runtimes"
+## Writeups
 
-    - **Rust** - Zero-cost abstractions, memory safety, concurrency models.
-    - **Go** - High-throughput network tooling, goroutines, channels.
-    - **Zig** - Manual memory management, optimized C-alternative integrations.
-    - **C# / .NET** - Enterprise software architecture, LINQ, Blazor.
-    - **Python** - Scripting, test automation, OOP paradigms.
+How my projects work, what makes them fast, and where they compromise.
 
-=== "Domain Expertise"
+<div class="grid cards" markdown>
 
-    * **Data Compression** - Streaming dictionary compression.
-    * **Algorithmic Design** - Big O analysis, complex data structures, Longest Common Subsequence.
-    * **Systems Engineering** - Content-addressable storage, delta diffing, Linux file I/O.
-    * **Quality Assurance** - Automated test pipelines, concurrency bug resolution.
+-   :material-fire: [**Firetrail**](writeups/firetrail.md)
 
-## Education
+    Fast lossless compression that trades smaller files for faster encoding.
 
-!!! info "Academic Background"
+-   :material-file-compare: [**coslcs**](writeups/coslcs.md)
 
-    **Howest University of Applied Sciences**
+    Fast sequence matching that trades an optimal result for a useful approximation.
 
-    - **Graduate Degree in Programming:** 2023 - 2025 (With Distinction)
+</div>

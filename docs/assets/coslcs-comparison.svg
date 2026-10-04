@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 640 180"
+     role="img"
+     aria-labelledby="title desc">
+  <title id="title">coslcs: faster matching, shorter results</title>
+  <desc id="desc">
+    The README reports an average 32-fold speedup over exact
+    dynamic-programming LCS, finding 83 percent as many matching bytes.
+    Results depend on the input.
+  </desc>
+
+  <rect width="640" height="180" rx="12" fill="#14161c"/>
+  <path d="M320 28V132" stroke="#2a2e39"/>
+
+  <g font-family="system-ui, sans-serif">
+    <g fill="#a5b4fc" font-size="42" font-weight="700">
+      <text x="28" y="70">32×</text>
+      <text x="348" y="70">83%</text>
+    </g>
+
+    <g fill="#edf0f5" font-size="15" font-weight="600">
+      <text x="28" y="100">faster than exact DP LCS</text>
+      <text x="348" y="100">as many matching bytes</text>
+    </g>
+
+    <g fill="#a6adbb" font-size="12">
+      <text x="28" y="122">Less time spent finding matches</text>
+      <text x="348" y="122">Compared with the longest result</text>
+      <text x="28" y="159">README averages · Results depend on the input</text>
+    </g>
+  </g>
+</svg>
