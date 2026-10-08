@@ -32,4 +32,8 @@ How my projects work, what makes them fast, and where they compromise.
 
     Fast sequence matching that trades an optimal result for a useful approximation.
 
+-   :material-label: [**Labels & Primitives**](writeups/labels-and-primitives.md)
+
+    A frozen spec. Eight primitives. One operator.
+
 </div>
