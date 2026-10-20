@@ -5,7 +5,7 @@
   <title id="title">The LaP spec: eight primitives, one operator, frozen</title>
   <desc id="desc">
     Labels and Primitives has exactly eight primitives and one operator.
-    The spec is frozen. Only compilers and tooling may change.
+    The spec is frozen. Only the tool may change.
   </desc>
 
   <rect width="640" height="220" rx="12" fill="#14161c"/>
