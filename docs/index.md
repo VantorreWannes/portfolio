@@ -34,6 +34,6 @@ How my projects work, what makes them fast, and where they compromise.
 
 -   :material-label: [**L&P**](writeups/labels-and-primitives.md)
 
-    A prefix-order combinator and bit-logic language built from 4 pulse lengths.
+    A universal language built from 4 pulse lengths to communicate with alien intelligence.
 
 </div>

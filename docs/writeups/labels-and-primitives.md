@@ -4,37 +4,55 @@ icon: material/label
 
 # L&P
 
-A prefix-order combinator and bit-logic language built from 4 pulse lengths.
+A universal language for alien contact. Four pulse lengths: no alphabet, no numbers, no convention for `1` or `0`.
+
+```text
+111 0 111 0 11 0 1 0 1 000
+```
+
+That signal is `..|??`: two unknown bits into NAND.
 
 ## Signal format
 
-Tokens are pulses separated by a 1-unit gap of silence. A 3+ unit gap of silence ends a message.
+Pulses are separated by a 1-unit gap (`0`). A 3+ unit gap (`000`) ends a message.
 
 | Pulse | Symbol | Meaning |
 | --- | --- | --- |
-| 1 unit | `?` | Unknown bit (0 or 1 until observed) |
-| 2 units | <code>&#124;</code> | NAND |
-| 3 units | `.` | Binary application (prefix order) |
-| 4 units | `!` | Iota combinator (`! x = x S K`) |
+| 1 unit (`1`) | `?` | Unknown bit (0 or 1 until observed) |
+| 2 units (`11`) | <code>&#124;</code> | NAND |
+| 3 units (`111`) | `.` | Binary application (prefix order) |
+| 4 units (`1111`) | `!` | Iota combinator (`! x = x S K`) |
 
-## Evaluation
+## Bootstrapping combinators
 
-Each `?` in an expression is a distinct unknown bit. Copies of a `?` made by combinators stay linked to that same bit.
+From `! x = x S K`, every combinator reduces from pure pulses:
 
-To evaluate an expression, test every 0/1 assignment of its `?`s:
+```text
+I = .!!          # ! ! = ! S K = S K (K K) = I
+K = .!.!I        # ! (! I) = ! (I S K) = ! (S K) = S K S K = K
+S = .!K          # ! K = K S K = S
+B = ..S.K S K
+C = ..S..B B S.K K
+```
 
-- Always 1: true
-- Always 0: false
-- Mixed: uncertain (`true_count / total_assignments`)
+## Uncertainty and truth
 
-## Representation and duality
+Each `?` is a distinct unknown bit. Copies made by combinators stay linked to that same bit.
 
-- `x | (x | x)` on `?` reduces to `1` (`K`), and `1 | 1` reduces to `0` (`K I`).
-- Bits are Church booleans: `1` is `K` (`lambda x y. x`) and `0` is `K I` (`lambda x y. y`).
-- Church numeral `0` (`K I`) shares the normal form of bit `0`. Church numeral `1` is `I` (`lambda f x. f x`), not `K`.
-- If `|` is read as NOR instead of NAND, `0` and `1` swap labels and every circuit and theorem still holds.
+| Expression | Assignments (`0`/`1`) | Result |
+| --- | --- | --- |
+| `?` | `0`, `1` | `1/2` (uncertain) |
+| `..|??` | `(0,0)->1`, `(0,1)->1`, `(1,0)->1`, `(1,1)->0` | `3/4` (uncertain) |
+| `.TAUTOLOGY?` | `0 -> 0|(0|0) = 1`, `1 -> 1|(1|1) = 1` | `1` (`K`, `lambda x y. x`) |
+| `..|ONE ONE` | `1 | 1 = 0` | `0` (`K I`, `lambda x y. y`) |
 
-## Stages
+Church numeral `0` (`K I`) shares the normal form of bit `0`. Church numeral `1` is `I` (`lambda f x. f x`), not `K`.
+
+Read `|` as NOR instead of NAND: `0` and `1` swap labels (`K` and `K I`), and every circuit and theorem still holds.
+
+## Transmission
+
+Sent in order, from `?` to arithmetic:
 
 ```text
 # Stage 1: Uncertainty and NAND
