@@ -10,34 +10,34 @@ repo_name = "vantorrewannes/portfolio"
 edit_uri = "edit/main/docs/"
 
 nav = [
-  { "Home" = "index.md" },
-  { "Writeups" = [
-    { "Firetrail" = "writeups/firetrail.md" },
-    { "coslcs" = "writeups/coslcs.md" },
-    { "Labels & Primitives" = "writeups/labels-and-primitives.md" },
-  ]},
+    { "Home" = "index.md" },
+    { "Writeups" = [
+        { "Firetrail" = "writeups/firetrail.md" },
+        { "coslcs" = "writeups/coslcs.md" },
+        { "L&P" = "writeups/labels-and-primitives.md" },
+    ] },
 ]
 
 [project.theme]
 language = "en"
 
 features = [
-  "content.action.edit",
-  "content.code.annotate",
-  "content.code.copy",
-  "content.footnote.tooltips",
-  "content.tabs.link",
-  "content.tooltips",
-  "header.autohide",
-  "navigation.footer",
-  "navigation.indexes",
-  "navigation.instant",
-  "navigation.instant.prefetch",
-  "navigation.path",
-  "navigation.sections",
-  "navigation.top",
-  "search.highlight",
-  "toc.follow",
+    "content.action.edit",
+    "content.code.annotate",
+    "content.code.copy",
+    "content.footnote.tooltips",
+    "content.tabs.link",
+    "content.tooltips",
+    "header.autohide",
+    "navigation.footer",
+    "navigation.indexes",
+    "navigation.instant",
+    "navigation.instant.prefetch",
+    "navigation.path",
+    "navigation.sections",
+    "navigation.top",
+    "search.highlight",
+    "toc.follow",
 ]
 
 [project.theme.font]
@@ -93,5 +93,5 @@ pymdownx.tasklist.custom_checkbox = true
 pymdownx.tilde = {}
 
 pymdownx.superfences.custom_fences = [
-  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+    { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
 ]
