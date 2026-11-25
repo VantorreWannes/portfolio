@@ -6,11 +6,11 @@ icon: material/label
 
 A universal language for alien contact. Four pulse lengths: no alphabet, no numbers, no convention for `1` or `0`.
 
-`111 0 111 0 11 0 1 0 1 000` is `..|??`: two unknown bits into NAND.
+`111 0 111 0 11 0 1 0 1` is `..|??`: two unknown bits into NAND.
 
 ## Signal format
 
-Pulses are separated by a 1-unit gap (`0`). A 3+ unit gap (`000`) ends a message.
+Pulses are separated by a 1-unit gap (`0`).
 
 | Pulse | Symbol | Meaning |
 | --- | --- | --- |

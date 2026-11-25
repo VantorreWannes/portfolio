@@ -58,7 +58,7 @@
   <rect x="676" y="148" width="460" height="346" rx="12" fill="#161922" stroke="#232733" stroke-width="2"/>
   <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="17">
     <text x="704" y="196" fill="#9ca3af" font-size="14">TRANSMITTED PULSE STREAM</text>
-    <text x="704" y="232" fill="#f3f4f6">111 0 111 0 11 0 1 0 1 000</text>
+    <text x="704" y="232" fill="#f3f4f6">111 0 111 0 11 0 1 0 1</text>
     <text x="704" y="264" fill="#60a5fa">..|??  (3/4 true)</text>
 
     <line x1="704" y1="292" x2="1108" y2="292" stroke="#232733" stroke-width="1.5"/>
@@ -67,7 +67,7 @@
     <text x="704" y="366" fill="#f472b6">I = .!!   K = .!.!I   S = .!K</text>
     <text x="704" y="402" fill="#34d399">ONE = .TAUTOLOGY?   ZERO = ..|ONE ONE</text>
     <text x="704" y="438" fill="#fbbf24">ADD = ..C I SUCC    MUL = B</text>
-    <text x="704" y="472" fill="#9ca3af" font-size="14">1-unit gap between pulses, 3+ ends message</text>
+    <text x="704" y="472" fill="#9ca3af" font-size="14">1-unit gap (0) between pulses</text>
   </g>
 
   <!-- Footer -->
