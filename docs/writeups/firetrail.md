@@ -8,7 +8,7 @@ icon: material/fire
 
 On the HDFS log benchmark, Firetrail Orange encoded at **2.42 GB/s**, nearly twice the throughput of `lz4 --fast=20`.
 
-The catch? Its output was larger. These two plots show the trade-off.
+The catch: larger output.
 
 [Source code](https://github.com/vantorrewannes/firetrail)
 
@@ -18,7 +18,7 @@ Same input: a 1.58 GB HDFS log. Orange needs no external dictionary.
 
 ![HDFS benchmark: Orange encodes nearly twice as fast as lz4, but produces larger output.](../assets/firetrail-hdfs.svg){ width="560" style="max-width: 100%; height: auto;" }
 
-**Firetrail wins time here, not space.** On Wikipedia text, Orange did both: it encoded `enwik9` faster than lz4 while producing slightly smaller output.
+**Firetrail wins time on HDFS logs, not space.** On Wikipedia text, Orange did both: it encoded `enwik9` faster than lz4 while producing slightly smaller output.
 
 Across all four tested corpora, Orange's geometric-mean encoding speed was **1.5× lz4** and **2.3× zstd** at these settings. lz4 decoded fastest throughout; zstd produced the smallest files.
 
@@ -27,7 +27,7 @@ Across all four tested corpora, Orange's geometric-mean encoding speed was **1.5
 
 Single-threaded, end-to-end CLI runs on a Ryzen 7 7800X3D running CachyOS, with a warm page cache.
 
-Baselines: lz4 1.10.0 at `--fast=20` and zstd 1.5.7 at `--fast=5`, both using `-T1`. These are fast configurations, not defaults.
+Baselines: lz4 1.10.0 at `--fast=20` and zstd 1.5.7 at `--fast=5`, both using `-T1`. Both are speed-tuned configurations, not defaults.
 
 Corpora: `silesia.tar`, `HDFS.log`, `enwik9`, and `enwik8`. Results are machine- and content-dependent.
 
@@ -35,7 +35,7 @@ White's separate README results use a dictionary trained on the input itself. Tr
 
 </details>
 
-## Why it moves quickly
+## How one lookup replaces match search
 
 Firetrail borrows the word-dictionary approach from Density. Instead of searching for long matches, it performs one lookup per 8-byte word.
 
@@ -53,7 +53,7 @@ No entropy coder. No heap allocations inside the block routines. The CLI reuses 
 Three modes control what the dictionary remembers:
 
 - **Orange:** replace entries on a miss. Adaptive and self-contained.
-- **Red:** protect frequently matched entries with counters. Useful for dictionary training.
+- **Red:** protect frequently matched entries with counters. Built for dictionary training.
 - **White:** keep the dictionary fixed. Reuse a trained table without updating it.
 
 ## Try it

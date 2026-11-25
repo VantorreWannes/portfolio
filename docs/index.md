@@ -26,11 +26,11 @@ How my projects work, what makes them fast, and where they compromise.
 
 -   :material-fire: [**Firetrail**](writeups/firetrail.md)
 
-    Fast lossless compression that trades smaller files for faster encoding.
+    Lossless compression at 2.42 GB/s on HDFS logs, trading ratio for throughput.
 
 -   :material-file-compare: [**coslcs**](writeups/coslcs.md)
 
-    Fast sequence matching that trades an optimal result for a useful approximation.
+    Approximate sequence matching that trades optimal LCS length for speed.
 
 -   :material-label: [**L&P**](writeups/labels-and-primitives.md)
 

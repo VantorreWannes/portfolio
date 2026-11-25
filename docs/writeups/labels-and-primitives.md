@@ -10,7 +10,7 @@ A universal language for alien contact. Four pulse lengths: no alphabet, no numb
 111 0 111 0 11 0 1 0 1 000
 ```
 
-That signal is `..|??`: two unknown bits into NAND.
+`111 0 111 0 11 0 1 0 1 000` is `..|??`: two unknown bits into NAND.
 
 ## Signal format
 
@@ -37,7 +37,7 @@ C = ..S..B B S.K K
 
 ## Uncertainty and truth
 
-Each `?` is a distinct unknown bit. Copies made by combinators stay linked to that same bit.
+Each `?` is a distinct unknown bit. Copies made by combinators stay linked to the same bit.
 
 | Expression | Assignments (`0`/`1`) | Result |
 | --- | --- | --- |

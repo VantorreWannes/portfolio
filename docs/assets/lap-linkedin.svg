@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 630"
+     role="img"
+     aria-labelledby="title desc">
+  <title id="title">L&amp;P: 4 pulse lengths to arithmetic</title>
+  <desc id="desc">
+    L&amp;P encodes four primitives as pulse lengths: 1 unit for unknown bit ?, 2 units for NAND |, 3 units for prefix application ., and 4 units for Iota !. From these, combinators, 1 and 0, logic gates, and arithmetic are derived.
+  </desc>
+
+  <rect width="1200" height="630" fill="#0f1117"/>
+
+  <!-- Header -->
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="64" y="84" fill="#f3f4f6" font-size="44" font-weight="700">L&amp;P</text>
+    <text x="168" y="82" fill="#9ca3af" font-size="24">
+      4 pulse lengths. No 0, no 1, no shared symbols.
+    </text>
+  </g>
+
+  <line x1="64" y1="116" x2="1136" y2="116" stroke="#232733" stroke-width="2"/>
+
+  <!-- Left panel: 4 pulses -->
+  <g font-family="'JetBrains Mono', ui-monospace, monospace">
+    <!-- 1 unit: ? -->
+    <text x="64" y="184" fill="#f3f4f6" font-size="28" font-weight="700">?</text>
+    <rect x="130" y="160" width="48" height="28" rx="6" fill="#60a5fa"/>
+    <text x="130" y="212" fill="#9ca3af" font-size="16">1 unit</text>
+    <text x="344" y="184" fill="#e5e7eb" font-family="system-ui, -apple-system, sans-serif" font-size="20">
+      Unknown bit (0 or 1)
+    </text>
+
+    <!-- 2 units: | -->
+    <text x="64" y="274" fill="#f3f4f6" font-size="28" font-weight="700">|</text>
+    <rect x="130" y="250" width="96" height="28" rx="6" fill="#34d399"/>
+    <text x="130" y="302" fill="#9ca3af" font-size="16">2 units</text>
+    <text x="344" y="274" fill="#e5e7eb" font-family="system-ui, -apple-system, sans-serif" font-size="20">
+      NAND (or NOR, self-dual)
+    </text>
+
+    <!-- 3 units: . -->
+    <text x="64" y="364" fill="#f3f4f6" font-size="28" font-weight="700">.</text>
+    <rect x="130" y="340" width="144" height="28" rx="6" fill="#fbbf24"/>
+    <text x="130" y="392" fill="#9ca3af" font-size="16">3 units</text>
+    <text x="344" y="364" fill="#e5e7eb" font-family="system-ui, -apple-system, sans-serif" font-size="20">
+      Prefix application
+    </text>
+
+    <!-- 4 units: ! -->
+    <text x="64" y="454" fill="#f3f4f6" font-size="28" font-weight="700">!</text>
+    <rect x="130" y="430" width="192" height="28" rx="6" fill="#f472b6"/>
+    <text x="130" y="482" fill="#9ca3af" font-size="16">4 units</text>
+    <text x="344" y="454" fill="#e5e7eb" font-family="system-ui, -apple-system, sans-serif" font-size="20">
+      Iota combinator (! x = x S K)
+    </text>
+  </g>
+
+  <!-- Right panel: Signal to Arithmetic -->
+  <rect x="676" y="148" width="460" height="346" rx="12" fill="#161922" stroke="#232733" stroke-width="2"/>
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="17">
+    <text x="704" y="196" fill="#9ca3af" font-size="14">TRANSMITTED PULSE STREAM</text>
+    <text x="704" y="232" fill="#f3f4f6">111 0 111 0 11 0 1 0 1 000</text>
+    <text x="704" y="264" fill="#60a5fa">..|??  (3/4 true)</text>
+
+    <line x1="704" y1="292" x2="1108" y2="292" stroke="#232733" stroke-width="1.5"/>
+
+    <text x="704" y="330" fill="#9ca3af" font-size="14">BOOTSTRAPPED FROM 4 PULSES</text>
+    <text x="704" y="366" fill="#f472b6">I = .!!   K = .!.!I   S = .!K</text>
+    <text x="704" y="402" fill="#34d399">ONE = .TAUTOLOGY?   ZERO = ..|ONE ONE</text>
+    <text x="704" y="438" fill="#fbbf24">ADD = ..C I SUCC    MUL = B</text>
+    <text x="704" y="472" fill="#9ca3af" font-size="14">1-unit gap between pulses, 3+ ends message</text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="64" y1="536" x2="1136" y2="536" stroke="#232733" stroke-width="2"/>
+  <text x="64" y="576" fill="#9ca3af" font-family="system-ui, -apple-system, sans-serif" font-size="20">
+    wannesvantorre.com/writeups/labels-and-primitives/
+  </text>
+</svg>

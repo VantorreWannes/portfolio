@@ -10,21 +10,21 @@ Two files can share bytes in the same order, even with gaps between them. An exa
 
 ![README averages: 32 times faster than exact DP LCS, finding 83 percent as many matching bytes. Results depend on the input.](../assets/coslcs-comparison.svg){ width="560" style="max-width: 100%; height: auto;" }
 
-Use it when a quick, approximate alignment is enough.
+Use it when approximate alignment beats exact LCS runtime.
 
 [Source code](https://github.com/vantorrewannes/coslcs)
 
 ## Take the nearest match
 
-**Closest Offset Sum** describes the rule: choose the matching byte pair with the smallest combined distance from the current positions, emit it, and move forward.
+**Closest Offset Sum** describes the rule: choose the matching byte pair with the smallest combined distance from the cursor positions, emit it, and advance.
 
-Equal leading bytes match immediately. Otherwise, a small byte lookup table replaces pairwise comparisons. The source scan stops when later candidates cannot improve the best match.
+Equal leading bytes match on the first check. Otherwise, a small byte lookup table replaces pairwise comparisons. The source scan stops once remaining offsets exceed the lowest sum.
 
 No backtracking. No heap allocations in the Zig iterator.
 
 ## What gets left behind
 
-A nearby match can block a better result:
+An early match can block a longer sequence:
 
 ```text
 source     z123abc
