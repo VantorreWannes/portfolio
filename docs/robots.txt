@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.wannesvantorre.com/sitemap.xml
+Sitemap: https://wannesvantorre.com/sitemap.xml

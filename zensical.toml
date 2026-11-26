@@ -2,7 +2,7 @@
 site_name = "Wannes Vantorre"
 site_description = "Systems programmer & AI developer in Bruges, Belgium. Writeups on Firetrail, coslcs, and L&P."
 site_author = "Wannes Vantorre"
-site_url = "https://www.wannesvantorre.com/"
+site_url = "https://wannesvantorre.com/"
 copyright = "Copyright &copy; 2026 Wannes Vantorre"
 
 repo_url = "https://github.com/vantorrewannes/portfolio"
