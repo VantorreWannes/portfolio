@@ -1,5 +1,8 @@
 ---
 icon: material/label
+title: L&P - Universal Language from 4 Pulse Lengths
+description: A universal language for alien contact built from four pulse lengths, deriving combinators, booleans, and Church arithmetic without 0 or 1.
+image: assets/lap-linkedin.png
 ---
 
 # L&P

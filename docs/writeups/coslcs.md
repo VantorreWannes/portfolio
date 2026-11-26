@@ -1,5 +1,7 @@
 ---
 icon: material/file-compare
+title: coslcs - Fast Approximate Sequence Matching in Zig
+description: Closest Offset Sum approximate longest common subsequence in Zig, trading optimal length for speed with zero iterator allocations.
 ---
 
 # coslcs

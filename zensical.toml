@@ -1,6 +1,6 @@
 [project]
-site_name = "Wannes Vantorre Portfolio"
-site_description = "My portfolio website made with Zensical."
+site_name = "Wannes Vantorre"
+site_description = "Systems programmer & AI developer in Bruges, Belgium. Writeups on Firetrail, coslcs, and L&P."
 site_author = "Wannes Vantorre"
 site_url = "https://www.wannesvantorre.com/"
 copyright = "Copyright &copy; 2026 Wannes Vantorre"
@@ -20,6 +20,8 @@ nav = [
 
 [project.theme]
 language = "en"
+custom_dir = "overrides"
+favicon = "assets/favicon.svg"
 
 features = [
     "content.action.edit",

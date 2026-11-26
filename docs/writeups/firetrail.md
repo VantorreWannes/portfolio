@@ -1,5 +1,7 @@
 ---
 icon: material/fire
+title: Firetrail - 2.42 GB/s Lossless Compression in Zig
+description: Lossless compression that trades file size for throughput, encoding HDFS logs at 2.42 GB/s using 8-byte word hashing.
 ---
 
 # Firetrail

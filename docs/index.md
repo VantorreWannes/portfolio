@@ -1,5 +1,6 @@
 ---
 icon: lucide/user
+description: Portfolio and technical writeups by Wannes Vantorre, systems programmer and AI developer in Bruges, Belgium.
 hide:
   - toc
 ---
